@@ -1,11 +1,11 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n\n# Introduction to Spark \u0026 Zeppelin\n#### An overview of the two Big Data tools.\n\nBefore pursuing, make sure you have saved the previous Interpreter binding window, otherwise you will get an error like `paragraph not found` when executing cells\n\n## Nom1\nIKHLEF KACEM",
-      "dateUpdated": "Feb 8, 2017 12:57:48 PM",
+      "text": "%md\n\n# Introduction to Spark \u0026 Zeppelin\n#### An overview of the two Big Data tools.\n\nBefore pursuing, make sure you have saved the previous Interpreter binding window, otherwise you will get an error like `paragraph not found` when executing cells\n\n## name\n\nIKHLEF Kacem",
+      "dateUpdated": "Feb 8, 2017 6:12:32 PM",
       "config": {
         "enabled": true,
-        "tableHide": false,
+        "tableHide": true,
         "graph": {
           "mode": "table",
           "height": 300.0,
@@ -21,8 +21,10 @@
           }
         },
         "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "colWidth": 12.0
+        "editorHide": false,
+        "colWidth": 12.0,
+        "results": {},
+        "editorSetting": {}
       },
       "settings": {
         "params": {},
@@ -31,53 +33,14 @@
       "jobName": "paragraph_1485333124506_-17357514",
       "id": "20161205-081916_1418679304",
       "result": {
-        "code": "SUCCESS",
-        "type": "HTML",
-        "msg": "\u003ch1\u003eIntroduction to Spark \u0026amp; Zeppelin\u003c/h1\u003e\n\u003ch4\u003eAn overview of the two Big Data tools.\u003c/h4\u003e\n\u003cp\u003eBefore pursuing, make sure you have saved the previous Interpreter binding window, otherwise you will get an error like \u003ccode\u003eparagraph not found\u003c/code\u003e when executing cells\u003c/p\u003e\n\u003ch2\u003eNom1\u003c/h2\u003e\n\u003cp\u003eIKHLEF KACEM\u003c/p\u003e\n"
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "paragraph_1485333124506_-17357514\u0027s Interpreter md not found"
       },
       "dateCreated": "Jan 25, 2017 8:32:04 AM",
-      "dateStarted": "Feb 8, 2017 12:57:41 PM",
-      "dateFinished": "Feb 8, 2017 12:57:41 PM",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%md\n![Spark logo](http://spark.apache.org/images/spark-logo-trademark.png)\n#\n[Apache Spark](http://spark.apache.org/) is a cluster computing engine designed to be __fast__ and __general-purpose__, making it the ideal choice for processing of large datasets. It answers those two points with __efficient data sharing__ accross computations.\n\u003chr/\u003e\nThe past years have seen a major changes in computing systems, as growing data volumes required more and more applications to scale out to large clusters. To solve this problem, a wide range of new programming models have been designed to manage multiple types of computations in a distributed fashion, without having people learn too much about distributed systems. Those programming models would need to deal with _parallelism, fault-tolerance and resource sharing_ for us.\n\n[Google\u0027s MapReduce](https://en.wikipedia.org/wiki/MapReduce) presented a simple and general model for batch processing, which handles faults and parallelism easily. Unfortunately the programming model is not adapted for other types of workloads, and multiple specialized systems were born to answer a specific need in a distributed way. \n* Iterative : Giraph\n* Interactive : Impala, Piccolo, Greenplum\n* Streaming : Storm, Millwheel\n\n#\nThe initial goal of Apache Spark is to try and unify all of the workloads for generality purposes. [Matei Zaharia](https://cs.stanford.edu/~matei/) in his [PhD dissertation](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2014/EECS-2014-12.pdf) suggests that most of the data flow models that required a specialized system needed _efficient data sharing_ accross computations:\n* Iterative algorithms like PageRank or K-Means need to make multiple passes over the same dataset\n* Interactive data mining often requires running multiple ad-hoc queries on the same subset of data\n* Streaming applications need to maintain and share state over time.\n\nHe then proposes to create a new abstraction that gives its users direct control over data sharing, something that other specialized systems would have built-in for their specific needs. The abstraction is implemented inside a new engine that is today called Apache Spark. The engine makes it possible to support more types of computations than with the original MapReduce in a more efficient way, including interactive queries and stream processing. ",
-      "dateUpdated": "Feb 8, 2017 12:56:29 PM",
-      "config": {
-        "enabled": true,
-        "tableHide": false,
-        "graph": {
-          "mode": "table",
-          "height": 300.0,
-          "optionOpen": false,
-          "keys": [],
-          "values": [],
-          "groups": [],
-          "scatter": {},
-          "map": {
-            "baseMapType": "Streets",
-            "isOnline": true,
-            "pinCols": []
-          }
-        },
-        "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "colWidth": 12.0
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "jobName": "paragraph_1485333124508_-19666008",
-      "id": "20161205-125129_704251374",
-      "result": {
-        "code": "SUCCESS",
-        "type": "HTML",
-        "msg": "\u003cp\u003e\u003cimg src\u003d\"http://spark.apache.org/images/spark-logo-trademark.png\" alt\u003d\"Spark logo\" /\u003e\u003c/p\u003e\n\u003ch1\u003e\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"http://spark.apache.org/\"\u003eApache Spark\u003c/a\u003e is a cluster computing engine designed to be \u003cstrong\u003efast\u003c/strong\u003e and \u003cstrong\u003egeneral-purpose\u003c/strong\u003e, making it the ideal choice for processing of large datasets. It answers those two points with \u003cstrong\u003eefficient data sharing\u003c/strong\u003e accross computations.\u003c/p\u003e\n\u003chr/\u003e\n\u003cp\u003eThe past years have seen a major changes in computing systems, as growing data volumes required more and more applications to scale out to large clusters. To solve this problem, a wide range of new programming models have been designed to manage multiple types of computations in a distributed fashion, without having people learn too much about distributed systems. Those programming models would need to deal with \u003cem\u003eparallelism, fault-tolerance and resource sharing\u003c/em\u003e for us.\u003c/p\u003e\n\u003cp\u003e\u003ca href\u003d\"https://en.wikipedia.org/wiki/MapReduce\"\u003eGoogle\u0027s MapReduce\u003c/a\u003e presented a simple and general model for batch processing, which handles faults and parallelism easily. Unfortunately the programming model is not adapted for other types of workloads, and multiple specialized systems were born to answer a specific need in a distributed way.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eIterative : Giraph\u003c/li\u003e\n\u003cli\u003eInteractive : Impala, Piccolo, Greenplum\u003c/li\u003e\n\u003cli\u003eStreaming : Storm, Millwheel\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch1\u003e\u003c/h1\u003e\n\u003cp\u003eThe initial goal of Apache Spark is to try and unify all of the workloads for generality purposes. \u003ca href\u003d\"https://cs.stanford.edu/~matei/\"\u003eMatei Zaharia\u003c/a\u003e in his \u003ca href\u003d\"https://www2.eecs.berkeley.edu/Pubs/TechRpts/2014/EECS-2014-12.pdf\"\u003ePhD dissertation\u003c/a\u003e suggests that most of the data flow models that required a specialized system needed \u003cem\u003eefficient data sharing\u003c/em\u003e accross computations:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eIterative algorithms like PageRank or K-Means need to make multiple passes over the same dataset\u003c/li\u003e\n\u003cli\u003eInteractive data mining often requires running multiple ad-hoc queries on the same subset of data\u003c/li\u003e\n\u003cli\u003eStreaming applications need to maintain and share state over time.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eHe then proposes to create a new abstraction that gives its users direct control over data sharing, something that other specialized systems would have built-in for their specific needs. The abstraction is implemented inside a new engine that is today called Apache Spark. The engine makes it possible to support more types of computations than with the original MapReduce in a more efficient way, including interactive queries and stream processing.\u003c/p\u003e\n"
-      },
-      "dateCreated": "Jan 25, 2017 8:32:04 AM",
-      "status": "READY",
+      "dateStarted": "Feb 1, 2017 10:32:09 AM",
+      "dateFinished": "Feb 1, 2017 10:32:09 AM",
+      "status": "ERROR",
       "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
@@ -123,7 +86,7 @@
     },
     {
       "text": "%md\n\n###Interpreter\n\nApache Zeppelin is primarily a notebook. A Zeppelin notebook consists of a set of cells with an interpreter _(or language backend)_ attached.\n\nFor example, this cell is linked to the Markdown interpreter, so when you run the cell it parses the code as Markdown and then displays the result.\n\nYou will find the most useful markdown components [on this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).\n\nIn each cell, there is a toolbar with four items: \n* The `Play` button (blue triangle) lets you run the paragraph. You can also press `Shift + Enter` to run the cell when selected\n* The `Show/Hide editor` if you want to see the source code for the cell\n* The `Show/Hide output` if you want to see the output for the cell\n* The `Settings` item, for more advanced options like adding/managing cells.\n\n\u003chr/\u003e\n\u003ch4 style\u003d\"color:red;\"\u003eExercise\u003c/h4\u003e\nNow you can press `Show editor` to see the source code of the cell. You will see that it starts with `%md`, which specifies to the cell that it should use the Markdown interpreter. You can edit the text and then run the cell to see the editing in the output.",
-      "dateUpdated": "Feb 1, 2017 6:53:21 AM",
+      "dateUpdated": "Feb 3, 2017 9:03:48 AM",
       "config": {
         "enabled": true,
         "graph": {
@@ -245,8 +208,49 @@
     },
     {
       "title": "Python cell",
-      "text": "%python\nprint(\"Hello world\")\n\nprint (1+2)\nprint \"kacem\"\n",
-      "dateUpdated": "Feb 8, 2017 11:21:55 AM",
+      "text": "%python\nprint(\"Hello world\")",
+      "dateUpdated": "Jan 25, 2017 8:33:22 AM",
+      "config": {
+        "enabled": true,
+        "title": true,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "editorMode": "ace/mode/python",
+        "colWidth": 4.0
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1485333124516_-35055964",
+      "id": "20161205-140620_27821049",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Hello world\n"
+      },
+      "dateCreated": "Jan 25, 2017 8:32:04 AM",
+      "dateStarted": "Jan 25, 2017 8:33:22 AM",
+      "dateFinished": "Jan 25, 2017 8:33:23 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Spark/Scala cell",
+      "text": "println(\"Hello world\")",
+      "dateUpdated": "Jan 25, 2017 8:33:26 AM",
       "config": {
         "enabled": true,
         "title": true,
@@ -272,57 +276,15 @@
         "forms": {}
       },
       "jobName": "paragraph_1485333124516_-35055964",
-      "id": "20161205-140620_27821049",
-      "result": {
-        "code": "SUCCESS",
-        "type": "TEXT",
-        "msg": "Hello world\n3\nkacem\n"
-      },
-      "dateCreated": "Jan 25, 2017 8:32:04 AM",
-      "dateStarted": "Feb 8, 2017 11:21:56 AM",
-      "dateFinished": "Feb 8, 2017 11:21:56 AM",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "title": "Spark/Scala cell",
-      "text": "println(\"Hello world\")\nprintln (1+5+6)\nprintln (\"kacem\")",
-      "dateUpdated": "Feb 8, 2017 11:26:32 AM",
-      "config": {
-        "enabled": true,
-        "title": true,
-        "graph": {
-          "mode": "table",
-          "height": 300.0,
-          "optionOpen": false,
-          "keys": [],
-          "values": [],
-          "groups": [],
-          "scatter": {},
-          "map": {
-            "baseMapType": "Streets",
-            "isOnline": true,
-            "pinCols": []
-          }
-        },
-        "editorMode": "ace/mode/scala",
-        "colWidth": 4.0,
-        "editorHide": false
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "jobName": "paragraph_1485333124516_-35055964",
       "id": "20161205-140627_1063236175",
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "Hello world\n12\nkacem\n"
+        "msg": "Hello world\n"
       },
       "dateCreated": "Jan 25, 2017 8:32:04 AM",
-      "dateStarted": "Feb 8, 2017 11:26:33 AM",
-      "dateFinished": "Feb 8, 2017 11:26:34 AM",
+      "dateStarted": "Jan 25, 2017 8:33:26 AM",
+      "dateFinished": "Jan 25, 2017 8:33:59 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -441,8 +403,8 @@
     },
     {
       "title": "Declaring variables",
-      "text": "val a\u003d3\nvar b : int \u003d5\nprintln(a+b)",
-      "dateUpdated": "Feb 8, 2017 12:51:38 PM",
+      "text": "val a \u003d 3 // val defines an immutable value\nvar b : Int \u003d 5 // var defines a mutable variable\nprintln(a + b)\n\nb \u003d 42\nprintln(a + b)\n\n// Note that the type of a variable or function is written after the variable or function. \n\n// Because Scala does type inference, it is also not necessary to declare type to variables when it looks obvious.",
+      "dateUpdated": "Jan 25, 2017 8:32:04 AM",
       "config": {
         "enabled": true,
         "tableHide": true,
@@ -467,14 +429,13 @@
       "jobName": "paragraph_1485333124523_-36210211",
       "id": "20161215-101655_1153115867",
       "result": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\na: Int \u003d 3\n\n\n\n\u003cconsole\u003e:25: error: not found: type int\n       var b : int \u003d5\n               ^\n"
+        "msg": "a: Int \u003d 3\nb: Int \u003d 5\n8\nb: Int \u003d 42\n45\n"
       },
       "dateCreated": "Jan 25, 2017 8:32:04 AM",
-      "dateStarted": "Feb 8, 2017 12:51:38 PM",
-      "dateFinished": "Feb 8, 2017 12:51:39 PM",
-      "status": "ERROR",
+      "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -1045,8 +1006,8 @@
     },
     {
       "title": "Return the sum of elements from 1 to 5",
-      "text": "val input \u003d List(1, 2, 3, 4, 5)\nval output \u003d input.reduce((x, y) \u003d\u003e x+y)\n\nval expected \u003d 15",
-      "dateUpdated": "Feb 8, 2017 1:03:44 PM",
+      "text": "val input \u003d List(1, 2, 3, 4, 5)\nval output \u003d input.reduce((x, y) \u003d\u003e x)\n\nval expected \u003d 15",
+      "dateUpdated": "Jan 25, 2017 9:23:28 AM",
       "config": {
         "colWidth": 6.0,
         "graph": {
@@ -1071,18 +1032,18 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\ninput: List[Int] \u003d List(1, 2, 3, 4, 5)\n\noutput: Int \u003d 15\n\nexpected: Int \u003d 15\n"
+        "msg": "\ninput: List[Int] \u003d List(1, 2, 3, 4, 5)\n\noutput: Int \u003d 1\n\nexpected: Int \u003d 15\n"
       },
       "dateCreated": "Jan 25, 2017 8:57:20 AM",
-      "dateStarted": "Feb 8, 2017 1:03:45 PM",
-      "dateFinished": "Feb 8, 2017 1:03:46 PM",
+      "dateStarted": "Jan 25, 2017 9:23:28 AM",
+      "dateFinished": "Jan 25, 2017 9:23:29 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Return the sum of squared pair numbers between 1 and 100",
-      "text": "val input \u003d 1 to 100\nval liste1 \u003d input.filter(x\u003d\u003e %2 \u003d\u003d 0)\nval liste2 \u003d liste1.map(x\u003d\u003e x*x)\nval output \u003d liste2.reduce((x\u003d,y) \u003d\u003ex+y)\n\n\n\nval expected \u003d 171700",
-      "dateUpdated": "Feb 8, 2017 1:03:15 PM",
+      "text": "val input \u003d 1 to 100\nval output \u003d input.reduce((x, y) \u003d\u003e x)\n\nval expected \u003d 171700",
+      "dateUpdated": "Feb 1, 2017 9:13:45 AM",
       "config": {
         "colWidth": 6.0,
         "graph": {
@@ -1105,20 +1066,20 @@
       "jobName": "paragraph_1485334647814_1417359099",
       "id": "20170125-085727_408760662",
       "result": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\ninput: scala.collection.immutable.Range.Inclusive \u003d Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100)\n\n\n\n\u003cconsole\u003e:1: error: \u0027)\u0027 expected but integer literal found.\nval liste1 \u003d input.filter(x\u003d\u003e %2 \u003d\u003d0)\n                               ^\n"
+        "msg": "\ninput: scala.collection.immutable.Range.Inclusive \u003d Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100)\n\noutput: Int \u003d 1\n\nexpected: Int \u003d 171700\n"
       },
       "dateCreated": "Jan 25, 2017 8:57:27 AM",
-      "dateStarted": "Feb 8, 2017 1:02:30 PM",
-      "dateFinished": "Feb 8, 2017 1:02:30 PM",
-      "status": "ERROR",
+      "dateStarted": "Feb 1, 2017 9:13:46 AM",
+      "dateFinished": "Feb 1, 2017 9:13:48 AM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Get highest number in a list with a reduce",
       "text": "import util.Random.nextInt\nval input \u003d Seq.fill(10)(nextInt)\nval output \u003d input.reduce((x, y) \u003d\u003e x)\n\nval expected \u003d input.max",
-      "dateUpdated": "Feb 8, 2017 1:04:27 PM",
+      "dateUpdated": "Jan 25, 2017 12:49:26 PM",
       "config": {
         "colWidth": 6.0,
         "graph": {
@@ -1132,8 +1093,8 @@
         },
         "enabled": true,
         "editorMode": "ace/mode/scala",
-        "editorHide": true,
-        "tableHide": true,
+        "editorHide": false,
+        "tableHide": false,
         "title": true
       },
       "settings": {
@@ -1145,11 +1106,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\nimport util.Random.nextInt\n\ninput: Seq[Int] \u003d List(-1357589297, -549458472, 1193750792, 39567115, -676405797, -819813378, 1463778314, 1928149076, -721389042, -333978169)\n\noutput: Int \u003d -1357589297\n\nexpected: Int \u003d 1928149076\n"
+        "msg": "\nimport util.Random.nextInt\n\ninput: Seq[Int] \u003d List(1368154480, 932727527, -956762629, -741728139, 1912445161, 1215347429, 1054732247, -811870848, 762475751, 1567410629)\n\noutput: Int \u003d 1368154480\n\nexpected: Int \u003d 1912445161\n"
       },
       "dateCreated": "Jan 25, 2017 8:57:32 AM",
-      "dateStarted": "Feb 8, 2017 1:04:28 PM",
-      "dateFinished": "Feb 8, 2017 1:04:29 PM",
+      "dateStarted": "Jan 25, 2017 12:49:26 PM",
+      "dateFinished": "Jan 25, 2017 12:49:29 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -2142,26 +2103,7 @@
   ],
   "name": "Practice",
   "id": "2C75UP2R2",
-  "angularObjects": {
-    "2C9ZW7FMN:shared_process": [],
-    "2C96GZRXZ:shared_process": [],
-    "2C85SNRQW:shared_process": [],
-    "2C85YUJSP:shared_process": [],
-    "2CBA8B17Z:shared_process": [],
-    "2C9HXGATN:shared_process": [],
-    "2C7K88Q2C:shared_process": [],
-    "2C98CDVBG:shared_process": [],
-    "2C8NJ3XKG:shared_process": [],
-    "2C7ZTEAPV:shared_process": [],
-    "2C885UF8N:shared_process": [],
-    "2C9UFECVM:shared_process": [],
-    "2CB3PYP4P:shared_process": [],
-    "2C8DAT6SZ:shared_process": [],
-    "2C98CRNRQ:shared_process": [],
-    "2CBBZJ56Z:shared_process": [],
-    "2C8G2J3WY:shared_process": [],
-    "2C8P9YXPQ:shared_process": []
-  },
+  "angularObjects": {},
   "config": {
     "looknfeel": "default"
   },
