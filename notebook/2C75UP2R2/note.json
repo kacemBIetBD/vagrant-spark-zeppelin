@@ -1,8 +1,8 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n\n# Introduction to Spark \u0026 Zeppelin\n#### An overview of the two Big Data tools.\n\nBefore pursuing, make sure you have saved the previous Interpreter binding window, otherwise you will get an error like `paragraph not found` when executing cells",
-      "dateUpdated": "Feb 1, 2017 10:32:11 AM",
+      "text": "%md\n\n# Introduction to Spark \u0026 Zeppelin\n#### An overview of the two Big Data tools.\n\nBefore pursuing, make sure you have saved the previous Interpreter binding window, otherwise you will get an error like `paragraph not found` when executing cells\n\n## Nom1\nIKHLEF KACEM",
+      "dateUpdated": "Feb 8, 2017 12:57:48 PM",
       "config": {
         "enabled": true,
         "tableHide": false,
@@ -33,17 +33,17 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch1\u003eIntroduction to Spark \u0026amp; Zeppelin\u003c/h1\u003e\n\u003ch4\u003eAn overview of the two Big Data tools.\u003c/h4\u003e\n\u003cp\u003eBefore pursuing, make sure you have saved the previous Interpreter binding window, otherwise you will get an error like \u003ccode\u003eparagraph not found\u003c/code\u003e when executing cells\u003c/p\u003e\n"
+        "msg": "\u003ch1\u003eIntroduction to Spark \u0026amp; Zeppelin\u003c/h1\u003e\n\u003ch4\u003eAn overview of the two Big Data tools.\u003c/h4\u003e\n\u003cp\u003eBefore pursuing, make sure you have saved the previous Interpreter binding window, otherwise you will get an error like \u003ccode\u003eparagraph not found\u003c/code\u003e when executing cells\u003c/p\u003e\n\u003ch2\u003eNom1\u003c/h2\u003e\n\u003cp\u003eIKHLEF KACEM\u003c/p\u003e\n"
       },
       "dateCreated": "Jan 25, 2017 8:32:04 AM",
-      "dateStarted": "Feb 1, 2017 10:32:09 AM",
-      "dateFinished": "Feb 1, 2017 10:32:09 AM",
+      "dateStarted": "Feb 8, 2017 12:57:41 PM",
+      "dateFinished": "Feb 8, 2017 12:57:41 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n![Spark logo](http://spark.apache.org/images/spark-logo-trademark.png)\n#\n[Apache Spark](http://spark.apache.org/) is a cluster computing engine designed to be __fast__ and __general-purpose__, making it the ideal choice for processing of large datasets. It answers those two points with __efficient data sharing__ accross computations.\n\u003chr/\u003e\nThe past years have seen a major changes in computing systems, as growing data volumes required more and more applications to scale out to large clusters. To solve this problem, a wide range of new programming models have been designed to manage multiple types of computations in a distributed fashion, without having people learn too much about distributed systems. Those programming models would need to deal with _parallelism, fault-tolerance and resource sharing_ for us.\n\n[Google\u0027s MapReduce](https://en.wikipedia.org/wiki/MapReduce) presented a simple and general model for batch processing, which handles faults and parallelism easily. Unfortunately the programming model is not adapted for other types of workloads, and multiple specialized systems were born to answer a specific need in a distributed way. \n* Iterative : Giraph\n* Interactive : Impala, Piccolo, Greenplum\n* Streaming : Storm, Millwheel\n\n#\nThe initial goal of Apache Spark is to try and unify all of the workloads for generality purposes. [Matei Zaharia](https://cs.stanford.edu/~matei/) in his [PhD dissertation](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2014/EECS-2014-12.pdf) suggests that most of the data flow models that required a specialized system needed _efficient data sharing_ accross computations:\n* Iterative algorithms like PageRank or K-Means need to make multiple passes over the same dataset\n* Interactive data mining often requires running multiple ad-hoc queries on the same subset of data\n* Streaming applications need to maintain and share state over time.\n\nHe then proposes to create a new abstraction that gives its users direct control over data sharing, something that other specialized systems would have built-in for their specific needs. The abstraction is implemented inside a new engine that is today called Apache Spark. The engine makes it possible to support more types of computations than with the original MapReduce in a more efficient way, including interactive queries and stream processing. ",
-      "dateUpdated": "Jan 25, 2017 8:32:04 AM",
+      "dateUpdated": "Feb 8, 2017 12:56:29 PM",
       "config": {
         "enabled": true,
         "tableHide": false,
@@ -441,8 +441,8 @@
     },
     {
       "title": "Declaring variables",
-      "text": "val a \u003d 3 // val defines an immutable value\nvar b : Int \u003d 5 // var defines a mutable variable\nprintln(a + b)\n\nb \u003d 42\nprintln(a + b)\n\n// Note that the type of a variable or function is written after the variable or function. \n\n// Because Scala does type inference, it is also not necessary to declare type to variables when it looks obvious.",
-      "dateUpdated": "Feb 8, 2017 11:27:16 AM",
+      "text": "val a\u003d3\nvar b : int \u003d5\nprintln(a+b)",
+      "dateUpdated": "Feb 8, 2017 12:51:38 PM",
       "config": {
         "enabled": true,
         "tableHide": true,
@@ -467,13 +467,14 @@
       "jobName": "paragraph_1485333124523_-36210211",
       "id": "20161215-101655_1153115867",
       "result": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "type": "TEXT",
-        "msg": "a: Int \u003d 3\nb: Int \u003d 5\n8\nb: Int \u003d 42\n45\n"
+        "msg": "\na: Int \u003d 3\n\n\n\n\u003cconsole\u003e:25: error: not found: type int\n       var b : int \u003d5\n               ^\n"
       },
       "dateCreated": "Jan 25, 2017 8:32:04 AM",
-      "status": "READY",
-      "errorMessage": "",
+      "dateStarted": "Feb 8, 2017 12:51:38 PM",
+      "dateFinished": "Feb 8, 2017 12:51:39 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -1044,8 +1045,8 @@
     },
     {
       "title": "Return the sum of elements from 1 to 5",
-      "text": "val input \u003d List(1, 2, 3, 4, 5)\nval output \u003d input.reduce((x, y) \u003d\u003e x)\n\nval expected \u003d 15",
-      "dateUpdated": "Jan 25, 2017 9:23:28 AM",
+      "text": "val input \u003d List(1, 2, 3, 4, 5)\nval output \u003d input.reduce((x, y) \u003d\u003e x+y)\n\nval expected \u003d 15",
+      "dateUpdated": "Feb 8, 2017 1:03:44 PM",
       "config": {
         "colWidth": 6.0,
         "graph": {
@@ -1070,18 +1071,18 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\ninput: List[Int] \u003d List(1, 2, 3, 4, 5)\n\noutput: Int \u003d 1\n\nexpected: Int \u003d 15\n"
+        "msg": "\ninput: List[Int] \u003d List(1, 2, 3, 4, 5)\n\noutput: Int \u003d 15\n\nexpected: Int \u003d 15\n"
       },
       "dateCreated": "Jan 25, 2017 8:57:20 AM",
-      "dateStarted": "Jan 25, 2017 9:23:28 AM",
-      "dateFinished": "Jan 25, 2017 9:23:29 AM",
+      "dateStarted": "Feb 8, 2017 1:03:45 PM",
+      "dateFinished": "Feb 8, 2017 1:03:46 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Return the sum of squared pair numbers between 1 and 100",
-      "text": "val input \u003d 1 to 100\nval output \u003d input.reduce((x, y) \u003d\u003e x)\n\nval expected \u003d 171700",
-      "dateUpdated": "Feb 1, 2017 9:13:45 AM",
+      "text": "val input \u003d 1 to 100\nval liste1 \u003d input.filter(x\u003d\u003e %2 \u003d\u003d 0)\nval liste2 \u003d liste1.map(x\u003d\u003e x*x)\nval output \u003d liste2.reduce((x\u003d,y) \u003d\u003ex+y)\n\n\n\nval expected \u003d 171700",
+      "dateUpdated": "Feb 8, 2017 1:03:15 PM",
       "config": {
         "colWidth": 6.0,
         "graph": {
@@ -1104,20 +1105,20 @@
       "jobName": "paragraph_1485334647814_1417359099",
       "id": "20170125-085727_408760662",
       "result": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "type": "TEXT",
-        "msg": "\ninput: scala.collection.immutable.Range.Inclusive \u003d Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100)\n\noutput: Int \u003d 1\n\nexpected: Int \u003d 171700\n"
+        "msg": "\ninput: scala.collection.immutable.Range.Inclusive \u003d Range(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100)\n\n\n\n\u003cconsole\u003e:1: error: \u0027)\u0027 expected but integer literal found.\nval liste1 \u003d input.filter(x\u003d\u003e %2 \u003d\u003d0)\n                               ^\n"
       },
       "dateCreated": "Jan 25, 2017 8:57:27 AM",
-      "dateStarted": "Feb 1, 2017 9:13:46 AM",
-      "dateFinished": "Feb 1, 2017 9:13:48 AM",
-      "status": "FINISHED",
+      "dateStarted": "Feb 8, 2017 1:02:30 PM",
+      "dateFinished": "Feb 8, 2017 1:02:30 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Get highest number in a list with a reduce",
       "text": "import util.Random.nextInt\nval input \u003d Seq.fill(10)(nextInt)\nval output \u003d input.reduce((x, y) \u003d\u003e x)\n\nval expected \u003d input.max",
-      "dateUpdated": "Jan 25, 2017 12:49:26 PM",
+      "dateUpdated": "Feb 8, 2017 1:04:27 PM",
       "config": {
         "colWidth": 6.0,
         "graph": {
@@ -1131,8 +1132,8 @@
         },
         "enabled": true,
         "editorMode": "ace/mode/scala",
-        "editorHide": false,
-        "tableHide": false,
+        "editorHide": true,
+        "tableHide": true,
         "title": true
       },
       "settings": {
@@ -1144,11 +1145,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\nimport util.Random.nextInt\n\ninput: Seq[Int] \u003d List(1368154480, 932727527, -956762629, -741728139, 1912445161, 1215347429, 1054732247, -811870848, 762475751, 1567410629)\n\noutput: Int \u003d 1368154480\n\nexpected: Int \u003d 1912445161\n"
+        "msg": "\nimport util.Random.nextInt\n\ninput: Seq[Int] \u003d List(-1357589297, -549458472, 1193750792, 39567115, -676405797, -819813378, 1463778314, 1928149076, -721389042, -333978169)\n\noutput: Int \u003d -1357589297\n\nexpected: Int \u003d 1928149076\n"
       },
       "dateCreated": "Jan 25, 2017 8:57:32 AM",
-      "dateStarted": "Jan 25, 2017 12:49:26 PM",
-      "dateFinished": "Jan 25, 2017 12:49:29 PM",
+      "dateStarted": "Feb 8, 2017 1:04:28 PM",
+      "dateFinished": "Feb 8, 2017 1:04:29 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
