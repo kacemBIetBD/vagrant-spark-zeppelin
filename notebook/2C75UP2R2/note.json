@@ -245,49 +245,8 @@
     },
     {
       "title": "Python cell",
-      "text": "%python\nprint(\"Hello world\")",
-      "dateUpdated": "Jan 25, 2017 8:33:22 AM",
-      "config": {
-        "enabled": true,
-        "title": true,
-        "graph": {
-          "mode": "table",
-          "height": 300.0,
-          "optionOpen": false,
-          "keys": [],
-          "values": [],
-          "groups": [],
-          "scatter": {},
-          "map": {
-            "baseMapType": "Streets",
-            "isOnline": true,
-            "pinCols": []
-          }
-        },
-        "editorMode": "ace/mode/python",
-        "colWidth": 4.0
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "jobName": "paragraph_1485333124516_-35055964",
-      "id": "20161205-140620_27821049",
-      "result": {
-        "code": "SUCCESS",
-        "type": "TEXT",
-        "msg": "Hello world\n"
-      },
-      "dateCreated": "Jan 25, 2017 8:32:04 AM",
-      "dateStarted": "Jan 25, 2017 8:33:22 AM",
-      "dateFinished": "Jan 25, 2017 8:33:23 AM",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "title": "Spark/Scala cell",
-      "text": "println(\"Hello world\")",
-      "dateUpdated": "Jan 25, 2017 8:33:26 AM",
+      "text": "%python\nprint(\"Hello world\")\n\nprint (1+2)\nprint \"kacem\"\n",
+      "dateUpdated": "Feb 8, 2017 11:21:55 AM",
       "config": {
         "enabled": true,
         "title": true,
@@ -313,15 +272,57 @@
         "forms": {}
       },
       "jobName": "paragraph_1485333124516_-35055964",
+      "id": "20161205-140620_27821049",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Hello world\n3\nkacem\n"
+      },
+      "dateCreated": "Jan 25, 2017 8:32:04 AM",
+      "dateStarted": "Feb 8, 2017 11:21:56 AM",
+      "dateFinished": "Feb 8, 2017 11:21:56 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Spark/Scala cell",
+      "text": "println(\"Hello world\")\nprintln (1+5+6)\nprintln (\"kacem\")",
+      "dateUpdated": "Feb 8, 2017 11:26:32 AM",
+      "config": {
+        "enabled": true,
+        "title": true,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "editorMode": "ace/mode/scala",
+        "colWidth": 4.0,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1485333124516_-35055964",
       "id": "20161205-140627_1063236175",
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "Hello world\n"
+        "msg": "Hello world\n12\nkacem\n"
       },
       "dateCreated": "Jan 25, 2017 8:32:04 AM",
-      "dateStarted": "Jan 25, 2017 8:33:26 AM",
-      "dateFinished": "Jan 25, 2017 8:33:59 AM",
+      "dateStarted": "Feb 8, 2017 11:26:33 AM",
+      "dateFinished": "Feb 8, 2017 11:26:34 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -441,7 +442,7 @@
     {
       "title": "Declaring variables",
       "text": "val a \u003d 3 // val defines an immutable value\nvar b : Int \u003d 5 // var defines a mutable variable\nprintln(a + b)\n\nb \u003d 42\nprintln(a + b)\n\n// Note that the type of a variable or function is written after the variable or function. \n\n// Because Scala does type inference, it is also not necessary to declare type to variables when it looks obvious.",
-      "dateUpdated": "Jan 25, 2017 8:32:04 AM",
+      "dateUpdated": "Feb 8, 2017 11:27:16 AM",
       "config": {
         "enabled": true,
         "tableHide": true,
@@ -2141,24 +2142,24 @@
   "name": "Practice",
   "id": "2C75UP2R2",
   "angularObjects": {
-    "2C93MQCCX:shared_process": [],
-    "2CAFQY6K3:shared_process": [],
-    "2C71Z8V22:shared_process": [],
-    "2C74PSEZQ:shared_process": [],
-    "2C7936H5V:shared_process": [],
-    "2C6WY8JHA:shared_process": [],
-    "2C8CCCVZ2:shared_process": [],
-    "2C9JTS6JQ:shared_process": [],
-    "2C91JKV9H:shared_process": [],
-    "2C8N1PP7C:shared_process": [],
-    "2C7YTW7VT:shared_process": [],
-    "2C85G18U9:shared_process": [],
-    "2C9XYSTEH:shared_process": [],
-    "2CA474ZG3:shared_process": [],
-    "2C8JNXQ9U:shared_process": [],
-    "2C827138T:shared_process": [],
-    "2CAA7GXEJ:shared_process": [],
-    "2C8W1GCP8:shared_process": []
+    "2C9ZW7FMN:shared_process": [],
+    "2C96GZRXZ:shared_process": [],
+    "2C85SNRQW:shared_process": [],
+    "2C85YUJSP:shared_process": [],
+    "2CBA8B17Z:shared_process": [],
+    "2C9HXGATN:shared_process": [],
+    "2C7K88Q2C:shared_process": [],
+    "2C98CDVBG:shared_process": [],
+    "2C8NJ3XKG:shared_process": [],
+    "2C7ZTEAPV:shared_process": [],
+    "2C885UF8N:shared_process": [],
+    "2C9UFECVM:shared_process": [],
+    "2CB3PYP4P:shared_process": [],
+    "2C8DAT6SZ:shared_process": [],
+    "2C98CRNRQ:shared_process": [],
+    "2CBBZJ56Z:shared_process": [],
+    "2C8G2J3WY:shared_process": [],
+    "2C8P9YXPQ:shared_process": []
   },
   "config": {
     "looknfeel": "default"
